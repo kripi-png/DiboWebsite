@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "unispace";
+  src: local("../../fonts/unispace/unispace rg.ttf");
+}
 .navbar {
   background: #15616D;
   height: 80px;
@@ -15,6 +19,9 @@
   text-align: center;
   vertical-align: middle;
 }
+.navbar .navItem:not(:first-child):hover {
+  transform: scale(1.05);
+}
 .navbar .navItem a {
   color: inherit;
   display: block;
@@ -29,17 +36,19 @@
 .navbar .navItem.title {
   font-size: 45px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .navbar .navItem.inviteButton {
-  float: right;
   background: #FF7D00;
-  font-weight: bold;
-  color: #001524;
-  width: 200px;
-  height: 50px;
-  margin: 15px;
   border-radius: 10px;
+  color: #001524;
+  float: right;
+  font-size: 19px;
+  font-weight: bold;
+  height: 50px;
   line-height: 50px;
+  margin: 15px;
+  width: 200px;
 }
 .navbar .navItem .heart {
   font-weight: bold;
@@ -52,11 +61,103 @@ body {
 
 body {
   background: #001524;
-  font-family: "Notable", sans-serif;
+  font-family: "unispace";
 }
 
 span {
   color: #FF7D00;
+}
+
+.botTitle {
+  color: #FFECD1;
+  float: right;
+  font-size: 40px;
+  margin: 80px 140px 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.boxHolder {
+  margin: 272px 0 0 140px;
+}
+
+.commandBox {
+  color: #FFECD1;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+.commandBox .commandItem {
+  font-size: 30px;
+}
+.commandBox .commandItem.title {
+  font-size: 45px;
+}
+.commandBox .commandItem.question::after {
+  content: "?";
+  display: inline-block;
+  font-size: 17px;
+  margin-left: 5px;
+}
+.commandBox .commandItem:not(:first-child)::before {
+  content: "-";
+  display: inline-block;
+  font-size: 22px;
+  margin-right: 5px;
+}
+.commandBox .commandItem ul {
+  list-style: none;
+}
+.commandBox:not(:last-child) {
+  margin-right: 250px;
+}
+
+.footer {
+  background: #15616D;
+  bottom: 0;
+  display: flex;
+  height: 160px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+.footer .footerItem {
+  flex: 1;
+}
+.footer .footerItem.title {
+  color: #FF7D00;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  height: 160px;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.footer .footerItem.title p {
+  margin: 0;
+}
+.footer .footerItem.title .copyright {
+  color: #FFECD1;
+  font-size: 14px;
+}
+.footer .footerItem .titleHolder {
+  margin: 0 auto;
+}
+.footer .footerItem a {
+  color: #FFECD1;
+}
+
+.separator {
+  background-color: #FFECD1;
+  margin: auto 0;
+  height: 100px;
+  opacity: 0.25;
+  width: 2px;
 }
 
 /*# sourceMappingURL=index.css.map */

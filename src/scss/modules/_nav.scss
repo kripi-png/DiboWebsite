@@ -15,6 +15,10 @@
     text-align: center;
     vertical-align: middle;
 
+    &:not(:first-child):hover {
+      transform: scale(1.05);
+    }
+
     a {
       color: inherit;
       display: block;
@@ -31,18 +35,20 @@
     &.title {
       font-size: 45px;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     &.inviteButton {
-      float: right;
       background: $highlight;
-      font-weight: bold;
-      color: $primary;
-      width: 200px;
-      height: 50px;
-      margin: 15px;
       border-radius: 10px;
+      color: $inviteButtonText;
+      float: right;
+      font-size: 19px;
+      font-weight: bold;
+      height: 50px;
       line-height: 50px;
+      margin: 15px;
+      width: 200px;
     }
 
     .heart {

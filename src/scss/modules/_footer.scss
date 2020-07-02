@@ -1,0 +1,48 @@
+.footer {
+  background: $secondary;
+  bottom: 0;
+  display: flex;
+  height: 160px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+
+  .footerItem {
+    flex: 1;
+
+    &.title {
+      color: $highlight;
+      display: flex;
+      flex-direction: column;
+      font-size: 40px;
+      height: 160px;
+      justify-content: center;
+      text-transform: uppercase;
+
+      p {
+        margin: 0;
+      }
+
+      .copyright {
+        color: $accent;
+        font-size: 14px;
+      }
+    }
+
+    .titleHolder {
+      margin: 0 auto;
+    }
+
+    a {
+      color: $accent;
+    }
+  }
+}
+.separator {
+  background-color: $accent;
+  margin: auto 0;
+  height: 100px;
+  opacity: .25;
+  width: 2px;
+}

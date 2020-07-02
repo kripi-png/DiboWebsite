@@ -5,6 +5,8 @@ linters:
     enabled: false
   SelectorFormat:
     enabled: false
+  NameFormat:
+    enabled: false
   NestingDepth:
     enabled: false
   HexNotation:

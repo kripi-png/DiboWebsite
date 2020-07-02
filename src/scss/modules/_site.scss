@@ -5,9 +5,20 @@ body {
 
 body {
   background: $primary;
-  font-family: 'Notable', sans-serif;
+  font-family: $font;
 }
 
 span {
   color: $highlight;
+}
+
+.botTitle {
+  color: $accent;
+  float: right;
+  font-size: 40px;
+  margin: 80px 140px 0 0;
+}
+
+a {
+  text-decoration: none;
 }
