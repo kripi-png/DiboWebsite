@@ -18,9 +18,8 @@ export default class App extends React.Component {
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={MainPage}/>
         <Route exact path={process.env.PUBLIC_URL + '/commands'} component={CommandsPage}/>
-        <Route exact path='/' component={MainPage}/>
-        <Route exact path='/commands' component={CommandsPage}/>
-        <Route component={NotFoundPage}/>
+        <Route exact path={process.env.PUBLIC_URL + '/404'} component={NotFoundPage}/>
+        <Redirect to={process.env.PUBLIC_URL + '/404'}/>
       </Switch>
     </Router>
   }
