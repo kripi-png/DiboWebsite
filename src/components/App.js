@@ -3,6 +3,8 @@ import Navbar from './navbar'
 import CommandBox from './commandBox'
 import Footer from './footer'
 
+import '../style/css/index.css'
+
 const gameCommands = {
   title:'Game Commands',
   elements: [
@@ -26,7 +28,7 @@ const normalCommands = {
   ]
 };
 
-function App() {
+export default function App() {
   return (
     <div id="App">
       <div id="navbarHolder"><Navbar/></div>
@@ -39,5 +41,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

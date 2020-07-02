@@ -1,5 +1,5 @@
-import React from 'react';
-import './index.css';
+import React from 'react'
+import '../style/css/index.css'
 
 export default class CommandBox extends React.Component {
   renderElement( elem, i ) {
