@@ -1,4 +1,5 @@
 import React from 'react'
+import fetch from 'node-fetch' 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 
