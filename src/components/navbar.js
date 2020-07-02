@@ -4,7 +4,7 @@ import '../style/css/index.css'
 export default class Navbar extends React.Component {
   render() {
     return <ul className="navbar">
-            <li className="navItem title"><a href="/#"><span>Dibo</span></a></li>
+            <li className="navItem title"><a href="/"><span>Dibo</span></a></li>
             <li className="navItem"><a href="/commands">Commands<span> (soon&trade;)</span></a></li>
             <li className="navItem">
               <a
