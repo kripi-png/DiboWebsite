@@ -1,5 +1,5 @@
-@import 'common/variables', 'common/typography';
+@import 'common/variables', 'common/typography', 'common/mixins';
 
 // @import 'styles/cozy';
 
-@import 'modules/nav', 'modules/site', 'modules/commandBox', 'modules/footer';
+@import 'modules/nav', 'modules/site', 'modules/commandBox', 'modules/footer', 'modules/404';

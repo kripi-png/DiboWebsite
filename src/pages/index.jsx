@@ -1,9 +1,7 @@
 import React from 'react'
-import Navbar from './navbar'
-import CommandBox from './commandBox'
-import Footer from './footer'
-
-import '../style/css/index.css'
+import Navbar from '../components/navbar'
+import Footer from '../components/footer'
+import CommandBox from '../components/commandBox'
 
 const gameCommands = {
   title:'Game Commands',
@@ -28,16 +26,18 @@ const normalCommands = {
   ]
 };
 
-export default function App() {
+const MainPage = () => {
   return (
-    <div id="App">
-      <div id="navbarHolder"><Navbar/></div>
-      <h1 className="botTitle">Multi-purpose <span> Discord Bot</span></h1>
-      <div className="boxHolder">
-        <CommandBox data={gameCommands}/>
-        <CommandBox data={normalCommands}/>
-      </div>
-      <div id="footerHolder"><Footer/></div>
+    <div id="MainPage">
+    <div id="navbarHolder"><Navbar/></div>
+    <h1 className="botTitle">Multi-purpose <span> Discord Bot</span></h1>
+    <div className="boxHolder">
+    <CommandBox data={gameCommands}/>
+    <CommandBox data={normalCommands}/>
+    </div>
+    <div id="footerHolder"><Footer/></div>
     </div>
   );
 }
+
+export default MainPage;

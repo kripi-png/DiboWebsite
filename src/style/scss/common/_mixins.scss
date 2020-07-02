@@ -1,0 +1,20 @@
+@mixin button($bg, $color, $width: 200px, $height: 50px, $lineheight: 50px) {
+  background: $bg;
+  border-radius: 10px;
+  color: $color;
+  font-size: 19px;
+  font-weight: bold;
+  height: $height;
+  line-height: $lineheight;
+  margin: 15px;
+  width: $width;
+}
+
+@mixin fullsize-link {
+  color: inherit;
+  display: block;
+  height: 100%;
+  margin: 0;
+  text-decoration: none;
+  width: 100%;
+}

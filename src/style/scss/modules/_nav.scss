@@ -19,14 +19,7 @@
       transform: scale(1.05);
     }
 
-    a {
-      color: inherit;
-      display: block;
-      height: 100%;
-      margin: 0;
-      text-decoration: none;
-      width: 100%;
-    }
+    a { @include fullsize-link; }
 
     &:not(:last-child) {
       margin-right: 80px;
@@ -39,16 +32,8 @@
     }
 
     &.inviteButton {
-      background: $highlight;
-      border-radius: 10px;
-      color: $inviteButtonText;
+      @include button($highlight, $primary);
       float: right;
-      font-size: 19px;
-      font-weight: bold;
-      height: 50px;
-      line-height: 50px;
-      margin: 15px;
-      width: 200px;
     }
 
     .heart {

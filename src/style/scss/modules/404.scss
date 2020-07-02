@@ -1,0 +1,17 @@
+.notFoundBox {
+  color: $accent;
+  text-align: center;
+
+  .notfound {
+    font-size: 4em;
+  }
+
+  .backButton {
+    @include button($highlight, $primary, 140px, 50px, 25px);
+    font-size: 15px;
+    margin: 0 auto;
+    padding: 5px;
+
+    a { @include fullsize-link; }
+  }
+}

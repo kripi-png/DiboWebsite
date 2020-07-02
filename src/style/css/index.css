@@ -42,13 +42,13 @@
   background: #FF7D00;
   border-radius: 10px;
   color: #001524;
-  float: right;
   font-size: 19px;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
   margin: 15px;
   width: 200px;
+  float: right;
 }
 .navbar .navItem .heart {
   font-weight: bold;
@@ -161,6 +161,36 @@ a {
   margin: auto 0;
   opacity: 0.25;
   width: 2px;
+}
+
+.notFoundBox {
+  color: #FFECD1;
+  text-align: center;
+}
+.notFoundBox .notfound {
+  font-size: 4em;
+}
+.notFoundBox .backButton {
+  background: #FF7D00;
+  border-radius: 10px;
+  color: #001524;
+  font-size: 19px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 25px;
+  margin: 15px;
+  width: 140px;
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.notFoundBox .backButton a {
+  color: inherit;
+  display: block;
+  height: 100%;
+  margin: 0;
+  text-decoration: none;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
