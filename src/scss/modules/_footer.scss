@@ -11,6 +11,10 @@
   .footerItem {
     flex: 1;
 
+    p {
+      margin: 0;
+    }
+
     &.title {
       color: $highlight;
       display: flex;
@@ -20,13 +24,11 @@
       justify-content: center;
       text-transform: uppercase;
 
-      p {
-        margin: 0;
-      }
-
       .copyright {
         color: $accent;
         font-size: 14px;
+        opacity: .5;
+        text-transform: none;
       }
     }
 
@@ -39,10 +41,11 @@
     }
   }
 }
+
 .separator {
   background-color: $accent;
-  margin: auto 0;
   height: 100px;
+  margin: auto 0;
   opacity: .25;
   width: 2px;
 }

@@ -7,7 +7,7 @@ export default class Navbar extends React.Component {
               <div className="footerItem title">
                 <div className="titleHolder">
                   <p>Dibo</p>
-                  <p className="copyright">© 2020 kripi__</p>
+                  <p className="copyright">© 2020 kripi__. All rights reserved</p>
                 </div>
               </div>
               <div className="separator"></div>

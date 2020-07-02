@@ -130,6 +130,9 @@ a {
 .footer .footerItem {
   flex: 1;
 }
+.footer .footerItem p {
+  margin: 0;
+}
 .footer .footerItem.title {
   color: #FF7D00;
   display: flex;
@@ -139,12 +142,11 @@ a {
   justify-content: center;
   text-transform: uppercase;
 }
-.footer .footerItem.title p {
-  margin: 0;
-}
 .footer .footerItem.title .copyright {
   color: #FFECD1;
   font-size: 14px;
+  opacity: 0.5;
+  text-transform: none;
 }
 .footer .footerItem .titleHolder {
   margin: 0 auto;
@@ -155,8 +157,8 @@ a {
 
 .separator {
   background-color: #FFECD1;
-  margin: auto 0;
   height: 100px;
+  margin: auto 0;
   opacity: 0.25;
   width: 2px;
 }
