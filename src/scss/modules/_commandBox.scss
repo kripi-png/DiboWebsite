@@ -17,8 +17,9 @@
       font-size: 45px;
     }
 
-    &.question::after {
-      content: '?';
+    span::after {
+      color: $accent;
+      content: attr(data-subtitle);
       display: inline-block;
       font-size: 17px;
       margin-left: 5px;

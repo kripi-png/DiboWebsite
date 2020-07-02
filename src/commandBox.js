@@ -3,15 +3,14 @@ import './index.css';
 
 export default class CommandBox extends React.Component {
   renderElement( elem, i ) {
-    let classes; if ( elem.question ) classes = "commandItem question"
-    else classes = "commandItem";
+    let info; if (elem.info ) info= <ul><li>{elem.info}</li></ul>
+    else info = null;
 
-    let subtitle; if (elem.subtitle ) subtitle= <ul><li>{elem.subtitle}</li></ul>
-    else subtitle = null;
+    let subtitle = elem.subtitle || ' ';
 
     return (
-      <li className={classes} key={i}><span>{elem.title}</span>
-        {subtitle || ''}
+      <li className="commandItem" key={i}><span data-subtitle={subtitle}>{elem.title}</span>
+        {info || ''}
       </li>
     )
   }

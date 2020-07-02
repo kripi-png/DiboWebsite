@@ -6,12 +6,12 @@ import Footer from './footer'
 const gameCommands = {
   title:'Game Commands',
   elements: [
-    {title: 'Rainbow 6: Siege', subtitle: 'user stats, map / operator info'},
-    {title: 'Minecraft', subtitle: 'user info, server status'},
-    {title: 'CSGO', subtitle: 'user stats, more'},
-    {title: 'Valorant', question: true},
-    {title: 'League of Legends', question: true},
-    {title: 'more', question: true}
+    {title: 'Rainbow 6: Siege', info: 'user stats, map / operator info'},
+    {title: 'Minecraft', info: 'user info, server status'},
+    {title: 'CSGO', info: 'user stats, more'},
+    {title: 'Valorant', subtitle: '?'},
+    {title: 'League of Legends', subtitle: '?'},
+    {title: 'more', subtitle: '?'}
   ]
 };
 
@@ -20,7 +20,7 @@ const normalCommands = {
   elements: [
     {title: 'user / server info'},
     {title: 'avatar'},
-    {title: 'animal pics & facts'},
+    {title: 'animal pics & facts', subtitle: 'aww'},
     {title: 'random num. gen. / coin flip'},
     {title: 'more'}
   ]

@@ -97,8 +97,9 @@ a {
 .commandBox .commandItem.title {
   font-size: 45px;
 }
-.commandBox .commandItem.question::after {
-  content: "?";
+.commandBox .commandItem span::after {
+  color: #FFECD1;
+  content: attr(data-subtitle);
   display: inline-block;
   font-size: 17px;
   margin-left: 5px;
