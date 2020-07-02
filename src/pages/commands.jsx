@@ -1,9 +1,10 @@
 import React from 'react'
-import fetch from 'node-fetch' 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
+import messages from '../helpMessages.json'
 
 const CommandsPage = () => {
+  console.log(messages.messages);
   return (
     <div id="CommandsPage">
     <div id="navbarHolder"><Navbar/></div>
