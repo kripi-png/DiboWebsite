@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../style/css/index.css'
 
 export default class Navbar extends React.Component {
   render() {
     return <ul className="navbar">
             <li className="navItem title"><Link to={process.env.PUBLIC_URL + '/'}><span>Dibo</span></Link></li>
-            <li className="navItem"><Link to={process.env.PUBLIC_URL + '/commands'}>Commands<span> (soon&trade;)</span></Link></li>
+            <li className="navItem"><Link to={process.env.PUBLIC_URL + '/commands'}>Commands</Link></li>
             <li className="navItem">
               <a
                 href="https://discord.gg/vn3ejPR"

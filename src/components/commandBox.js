@@ -1,5 +1,4 @@
 import React from 'react'
-import '../style/css/index.css'
 
 export default class CommandBox extends React.Component {
   renderElement( elem, i ) {
@@ -25,25 +24,3 @@ export default class CommandBox extends React.Component {
           </ul> ;
   }
 }
-
-// {this.props.data}
-// <li className="commandItem title">Game Commands</li>
-//
-// <li className="commandItem"><span>Rainbow 6: Siege</span>
-//   <ul>
-//     <li>user stats, map / operator info</li>
-//   </ul>
-// </li>
-// <li className="commandItem"><span>Minecraft</span>
-//   <ul>
-//     <li>user info, server status</li>
-//   </ul>
-// </li>
-// <li className="commandItem"><span>CSGO</span>
-//   <ul>
-//     <li>user stats, more</li>
-//   </ul>
-// </li>
-// <li className="commandItem question"><span>Valorant</span></li>
-// <li className="commandItem question"><span>League of Legends</span></li>
-// <li className="commandItem question"><span>more</span></li>

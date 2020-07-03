@@ -1,5 +1,8 @@
 html,
-body {
+body,
+#root,
+#root > div {
+  height: 100%;
   margin: 0;
 }
 
@@ -21,4 +24,13 @@ span {
 
 a {
   text-decoration: none;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#root > div {
+  display: flex;
+  flex-direction: column;
 }

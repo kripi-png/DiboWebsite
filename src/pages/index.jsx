@@ -26,18 +26,26 @@ const normalCommands = {
   ]
 };
 
-const MainPage = () => {
-  return (
-    <div id="MainPage">
-    <div id="navbarHolder"><Navbar/></div>
-    <h1 className="botTitle">Multi-purpose <span> Discord Bot</span></h1>
-    <div className="boxHolder">
-    <CommandBox data={gameCommands}/>
-    <CommandBox data={normalCommands}/>
-    </div>
-    <div id="footerHolder"><Footer/></div>
-    </div>
-  );
+class MainPage extends React.Component {
+  componentDidMount(){
+    document.title = "Home - Dibo"
+  }
+
+  render() {
+    return (
+      <div id="MainPage">
+        <main>
+          <div id="navbarHolder"><Navbar/></div>
+          <h1 className="botTitle">Multi-purpose <span> Discord Bot</span></h1>
+          <div className="boxHolder">
+            <CommandBox data={gameCommands}/>
+            <CommandBox data={normalCommands}/>
+          </div>
+        </main>
+        <div id="footerHolder"><Footer/></div>
+      </div>
+    );
+  }
 }
 
 export default MainPage;

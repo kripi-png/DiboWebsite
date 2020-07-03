@@ -1,0 +1,92 @@
+.commandListHolder {
+  margin: 80px 140px 0;
+  display: flex;
+
+  >div {
+    flex: 4;
+
+    &:not(:last-child) {
+      margin-right: 140px;
+    }
+  }
+  #commandMenu {
+    flex: 1;
+
+    h1 {
+      color: $accent;
+    }
+
+    ul {
+      margin: 0;
+      color: $accent;
+      list-style: none;
+      border: 1px solid $accent;
+      font-size: 30px;
+      padding: 0;
+
+      li {
+        position: relative;
+        padding: 10px;
+
+        p {
+          margin: 5px;
+        }
+
+        &:hover {
+          color: $highlight;
+        }
+
+        &.active {
+          color: $highlight;
+        }
+      }
+
+      li:nth-child(2n + 1)>p {
+        &::before {
+          content: '';
+          background: transparentize($secondary, .4);
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          top: 0;
+          left: 0;
+          z-index: -100;
+        }
+      }
+    }
+  }
+
+  #commandList {
+    border: 1px solid $accent;
+
+    table {
+      color: $accent;
+      width: 100%;
+    }
+
+    tr {
+      min-height: 80px;
+      display: flex;
+
+      td,th { flex: 3; }
+
+      td,th { &:first-child { flex: 1; } }
+
+      td,th { &:last-child { flex: 3; } }
+
+      td:first-child {
+        padding-left: 50px;
+      }
+
+      td:last-child {
+        padding-right: 50px;
+        text-align: right;
+      }
+    }
+
+    th {
+      color: $highlight;
+      line-height: 80px;
+    }
+  }
+}
