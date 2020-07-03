@@ -1,0 +1,64 @@
+.page-wrapper {
+  flex: 1;
+  min-height: 673px;
+
+  .botTitle {
+    color: $accent;
+    float: right;
+    font-size: 2.5em;
+    padding-right: 1em;
+  }
+
+  .boxHolder {
+    height: 100%;
+    padding: 5em;
+    width: calc(100% - 10em);
+  }
+
+  .commandBox {
+    color: $accent;
+    float: left;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: calc(100% / 2);
+
+    .commandItem {
+      font-size: 2em;
+
+      &.title { font-size: 2.5em; }
+
+      span::after {
+        color: $accent;
+        content: attr(data-subtitle);
+        display: inline-block;
+        font-size: .6em;
+        margin-left: .5em;
+      }
+
+      &:not(:first-child)::before {
+        content: '-';
+        display: inline-block;
+        font-size: .6em;
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
+.page-wrapper-tablet {
+  .boxHolder {
+    padding: 8em 2.5em;
+  }
+
+  .botTitle { font-size: 2em; }
+
+  .commandBox {
+    .commandItem { font-size: 1.7em;
+
+      &.title { font-size: 2.2em; }
+    }
+  }
+}

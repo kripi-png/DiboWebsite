@@ -1,56 +1,44 @@
-#footerHolder {
-  flex-shrink: 0;
-  margin-top: 80px;
-}
-
 .footer {
   background: $secondary;
-  // bottom: 0;
-  display: flex;
-  height: 160px;
-  margin: 0;
-  padding: 0;
-  // position: sticky;
-  width: 100%;
+  min-height: 160px;
+  padding: 2em;
+  width: calc(100% - 4em); // separator margin
+  font-size: 1em;
 
-  .footerItem {
-    flex: 1;
+  .content {
+    height: 100%;
 
-    p {
-      margin: 0;
-    }
+    .footerItem {
+      height: 100%;
+      width: calc(100% / 3);
+      float: left;
 
-    &.title {
-      color: $highlight;
-      display: flex;
-      flex-direction: column;
-      font-size: 40px;
-      height: 160px;
-      justify-content: center;
-      text-transform: uppercase;
+      .title {
+        margin: 0;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+      }
 
-      .copyright {
+      .copyright,
+      .credits {
         color: $accent;
-        font-size: 14px;
         opacity: .5;
         text-transform: none;
+        margin: 0;
       }
-    }
 
-    .titleHolder {
-      margin: 0 auto;
-    }
+      .credits {
+        color: $highlight;
+        opacity: 1;
+      }
 
-    a {
-      color: $accent;
+      a {
+        color: $accent;
+      }
     }
   }
 }
 
-.separator {
-  background-color: $accent;
-  height: 100px;
-  margin: auto 0;
-  opacity: .25;
-  width: 2px;
+.footer-tablet .content .footerItem {
+  width: calc(100% / 1);
 }

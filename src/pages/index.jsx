@@ -1,32 +1,12 @@
 import React from 'react'
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
-import CommandBox from '../components/commandBox'
+import Navbar, { NavbarTablet } from '../components/navbar'
+import MenuDrawer from '../components/menuDrawer.js'
+import Footer, { FooterTablet } from '../components/footer'
+import Main from '../components/main'
+import Breakpoint from
+  '../components/responsive_utilities/breakpoint'
 
-const gameCommands = {
-  title:'Game Commands',
-  elements: [
-    {title: 'Rainbow 6: Siege', info: 'user stats, map / operator info'},
-    {title: 'Minecraft', info: 'user info, server status'},
-    {title: 'CSGO', info: 'user stats, more'},
-    {title: 'Valorant', subtitle: '?'},
-    {title: 'League of Legends', subtitle: '?'},
-    {title: 'more', subtitle: '?'}
-  ]
-};
-
-const normalCommands = {
-  title:'Useful and Fun commands',
-  elements: [
-    {title: 'user / server info'},
-    {title: 'avatar'},
-    {title: 'animal pics & facts', subtitle: 'aww'},
-    {title: 'random num. gen. / coin flip'},
-    {title: 'more'}
-  ]
-};
-
-class MainPage extends React.Component {
+export default class MainPage extends React.Component {
   componentDidMount(){
     document.title = "Home - Dibo"
   }
@@ -34,18 +14,17 @@ class MainPage extends React.Component {
   render() {
     return (
       <div id="MainPage">
-        <main>
-          <div id="navbarHolder"><Navbar/></div>
-          <h1 className="botTitle">Multi-purpose <span> Discord Bot</span></h1>
-          <div className="boxHolder">
-            <CommandBox data={gameCommands}/>
-            <CommandBox data={normalCommands}/>
-          </div>
-        </main>
-        <div id="footerHolder"><Footer/></div>
+        <div id="navbarHolder">
+          <Breakpoint><Navbar/></Breakpoint>
+          <Breakpoint name="tablet"><NavbarTablet/><MenuDrawer/></Breakpoint>
+        </div>
+        <Breakpoint><Main className="page-wrapper"></Main></Breakpoint>
+        <Breakpoint name="tablet">
+          <Main className="page-wrapper page-wrapper-tablet"></Main>
+        </Breakpoint>
+        <Breakpoint><Footer/></Breakpoint>
+        <Breakpoint name="tablet"><FooterTablet/></Breakpoint>
       </div>
     );
   }
 }
-
-export default MainPage;

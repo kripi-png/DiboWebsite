@@ -2,6 +2,18 @@
   font-family: "unispace";
   src: local("../../fonts/unispace/unispace rg.ttf");
 }
+span {
+  color: #FF7D00;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #FF7D00;
+}
+
 .navbar {
   background: #15616D;
   height: 80px;
@@ -53,129 +65,157 @@
 .navbar .navItem .heart {
   font-weight: bold;
 }
-
-html,
-body,
-#root,
-#root > div {
-  height: 100%;
-  margin: 0;
+.navbar .menuBurger {
+  width: auto;
+  height: 60px;
+  margin: 10px 100px 10px 30px;
+  float: left;
+  transition: transform 0.08s;
+}
+.navbar .menuBurger.clicked {
+  transform: scale(1.1);
 }
 
-body {
-  background: #001524;
-  font-family: "unispace";
+.navbar-tablet {
+  padding: 0;
 }
 
-span {
-  color: #FF7D00;
+#menuDrawer {
+  background-color: #15616D;
+  position: absolute;
+  width: 300px;
+  margin: 10px 0 0 30px;
+  border-radius: 10px;
+  padding: 10px;
+  transform: translateX(-500px);
+  transition: transform 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-
-.botTitle {
+#menuDrawer.open {
+  transform: translateX(0);
+}
+#menuDrawer ul {
   color: #FFECD1;
-  float: right;
-  font-size: 40px;
-  margin: 80px 140px 0 0;
+  font-size: 20px;
+}
+#menuDrawer ul li {
+  margin: 20px 0;
+}
+#menuDrawer ul a {
+  color: inherit;
 }
 
-a {
-  text-decoration: none;
+html {
+  min-width: 300px;
 }
 
-main {
-  flex: 1 0 auto;
+ul {
+  list-style: none;
 }
 
 #root > div {
+  background: #001524;
   display: flex;
   flex-direction: column;
+  font-family: "unispace";
+  margin: 0;
+  min-height: 100vh;
 }
 
-.boxHolder {
-  margin: 272px 0 0 140px;
+.page-wrapper {
+  flex: 1;
+  min-height: 673px;
 }
-
-.commandBox {
+.page-wrapper .botTitle {
   color: #FFECD1;
-  display: inline-block;
+  float: right;
+  font-size: 2.5em;
+  padding-right: 1em;
+}
+.page-wrapper .boxHolder {
+  height: 100%;
+  padding: 5em;
+  width: calc(100% - 10em);
+}
+.page-wrapper .commandBox {
+  color: #FFECD1;
+  float: left;
+  height: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
   vertical-align: top;
+  width: calc(100% / 2);
 }
-.commandBox .commandItem {
-  font-size: 30px;
+.page-wrapper .commandBox .commandItem {
+  font-size: 2em;
 }
-.commandBox .commandItem.title {
-  font-size: 45px;
+.page-wrapper .commandBox .commandItem.title {
+  font-size: 2.5em;
 }
-.commandBox .commandItem span::after {
+.page-wrapper .commandBox .commandItem span::after {
   color: #FFECD1;
   content: attr(data-subtitle);
   display: inline-block;
-  font-size: 17px;
-  margin-left: 5px;
+  font-size: 0.6em;
+  margin-left: 0.5em;
 }
-.commandBox .commandItem:not(:first-child)::before {
+.page-wrapper .commandBox .commandItem:not(:first-child)::before {
   content: "-";
   display: inline-block;
-  font-size: 22px;
-  margin-right: 5px;
-}
-.commandBox .commandItem ul {
-  list-style: none;
-}
-.commandBox:not(:last-child) {
-  margin-right: 250px;
+  font-size: 0.6em;
+  margin-right: 0.5em;
 }
 
-#footerHolder {
-  flex-shrink: 0;
-  margin-top: 80px;
+.page-wrapper-tablet .boxHolder {
+  padding: 8em 2.5em;
+}
+.page-wrapper-tablet .botTitle {
+  font-size: 2em;
+}
+.page-wrapper-tablet .commandBox .commandItem {
+  font-size: 1.7em;
+}
+.page-wrapper-tablet .commandBox .commandItem.title {
+  font-size: 2.2em;
 }
 
 .footer {
   background: #15616D;
-  display: flex;
-  height: 160px;
+  min-height: 160px;
+  padding: 2em;
+  width: calc(100% - 4em);
+  font-size: 1em;
+}
+.footer .content {
+  height: 100%;
+}
+.footer .content .footerItem {
+  height: 100%;
+  width: calc(100% / 3);
+  float: left;
+}
+.footer .content .footerItem .title {
   margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.footer .footerItem {
-  flex: 1;
-}
-.footer .footerItem p {
-  margin: 0;
-}
-.footer .footerItem.title {
-  color: #FF7D00;
-  display: flex;
-  flex-direction: column;
-  font-size: 40px;
-  height: 160px;
-  justify-content: center;
   text-transform: uppercase;
+  margin-bottom: 2em;
 }
-.footer .footerItem.title .copyright {
+.footer .content .footerItem .copyright,
+.footer .content .footerItem .credits {
   color: #FFECD1;
-  font-size: 14px;
   opacity: 0.5;
   text-transform: none;
+  margin: 0;
 }
-.footer .footerItem .titleHolder {
-  margin: 0 auto;
+.footer .content .footerItem .credits {
+  color: #FF7D00;
+  opacity: 1;
 }
-.footer .footerItem a {
+.footer .content .footerItem a {
   color: #FFECD1;
 }
 
-.separator {
-  background-color: #FFECD1;
-  height: 100px;
-  margin: auto 0;
-  opacity: 0.25;
-  width: 2px;
+.footer-tablet .content .footerItem {
+  width: calc(100% / 1);
 }
 
 .notFoundBox {
