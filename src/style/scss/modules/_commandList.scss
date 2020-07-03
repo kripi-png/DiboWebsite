@@ -1,55 +1,46 @@
 .commandListHolder {
-  margin: 80px 140px 0;
   display: flex;
+  margin: 80px 140px 0;
 
   >div {
     flex: 4;
 
-    &:not(:last-child) {
-      margin-right: 140px;
-    }
+    &:not(:last-child) { margin-right: 140px; }
   }
+
   #commandMenu {
     flex: 1;
 
-    h1 {
-      color: $accent;
-    }
+    h1 { color: $accent; }
 
     ul {
-      margin: 0;
-      color: $accent;
-      list-style: none;
       border: 1px solid $accent;
+      color: $accent;
       font-size: 30px;
+      list-style: none;
+      margin: 0;
       padding: 0;
 
       li {
-        position: relative;
         padding: 10px;
+        position: relative;
 
-        p {
-          margin: 5px;
-        }
+        p { margin: 5px; }
 
-        &:hover {
-          color: $highlight;
-        }
+        &:hover { color: $highlight; }
 
-        &.active {
-          color: $highlight;
-        }
+        &.active { color: $highlight; }
       }
 
       li:nth-child(2n + 1)>p {
         &::before {
-          content: '';
           background: transparentize($secondary, .4);
-          position: absolute;
           bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
           right: 0;
           top: 0;
-          left: 0;
           z-index: -100;
         }
       }
@@ -59,24 +50,21 @@
   #commandList {
     border: 1px solid $accent;
 
-    table {
-      color: $accent;
-      width: 100%;
-    }
+    table { color: $accent; width: 100%; }
 
     tr {
-      min-height: 80px;
       display: flex;
+      min-height: 80px;
 
-      td,th { flex: 3; }
+      td,
+      th { &:first-child { flex: 1; } }
 
-      td,th { &:first-child { flex: 1; } }
+      td,
+      th,
+      td:last-child,
+      th:last-child { flex: 3; }
 
-      td,th { &:last-child { flex: 3; } }
-
-      td:first-child {
-        padding-left: 50px;
-      }
+      td:first-child { padding-left: 50px; }
 
       td:last-child {
         padding-right: 50px;
@@ -84,9 +72,7 @@
       }
     }
 
-    th {
-      color: $highlight;
-      line-height: 80px;
+    th { color: $highlight; line-height: 80px;
     }
   }
 }

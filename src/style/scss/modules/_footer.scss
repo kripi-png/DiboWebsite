@@ -1,44 +1,39 @@
 .footer {
   background: $secondary;
+  font-size: 1em;
   min-height: 160px;
   padding: 2em;
   width: calc(100% - 4em); // separator margin
-  font-size: 1em;
 
   .content {
     height: 100%;
 
     .footerItem {
+      float: left;
       height: 100%;
       width: calc(100% / 3);
-      float: left;
 
       .title {
         margin: 0;
-        text-transform: uppercase;
         margin-bottom: 2em;
+        text-transform: uppercase;
       }
 
       .copyright,
       .credits {
         color: $accent;
+        margin: 0;
         opacity: .5;
         text-transform: none;
-        margin: 0;
       }
 
       .credits {
         color: $highlight;
         opacity: 1;
       }
-
-      a {
-        color: $accent;
-      }
     }
   }
 }
 
-.footer-tablet .content .footerItem {
-  width: calc(100% / 1);
-}
+.footer-phone .content .footerItem,
+.footer-tablet .content .footerItem { width: calc(100% / 1); }

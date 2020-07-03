@@ -7,6 +7,7 @@ span {
 }
 
 a {
+  color: #FFECD1;
   text-decoration: none;
 }
 
@@ -19,12 +20,12 @@ h1 {
   height: 80px;
   list-style: none;
   margin: 0;
-  padding: 0 140px;
+  padding: 0 5em;
 }
 .navbar .navItem {
   color: #FFECD1;
   display: inline-block;
-  font-size: 25px;
+  font-size: 1.7em;
   height: 80px;
   line-height: 80px;
   padding: 0;
@@ -43,10 +44,10 @@ h1 {
   width: 100%;
 }
 .navbar .navItem:not(:last-child) {
-  margin-right: 80px;
+  margin-right: 2em;
 }
 .navbar .navItem.title {
-  font-size: 45px;
+  font-size: 3em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -66,11 +67,12 @@ h1 {
   font-weight: bold;
 }
 .navbar .menuBurger {
-  width: auto;
-  height: 60px;
-  margin: 10px 100px 10px 30px;
   float: left;
+  height: 3em;
+  margin: calc(( 80px - 3em ) / 2) 100px calc(( 80px - 3em ) / 2) 30px;
   transition: transform 0.08s;
+  width: auto;
+  fill: #FF7D00;
 }
 .navbar .menuBurger.clicked {
   transform: scale(1.1);
@@ -80,28 +82,45 @@ h1 {
   padding: 0;
 }
 
+.navbar-phone {
+  padding: 0;
+}
+
 #menuDrawer {
   background-color: #15616D;
-  position: absolute;
-  width: 300px;
-  margin: 10px 0 0 30px;
   border-radius: 10px;
+  margin: 10px 0 0 30px;
   padding: 10px;
+  position: absolute;
   transform: translateX(-500px);
-  transition: transform 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: transform 0.25s cubic-bezier(0, 0.96, 0, 1.01);
 }
 #menuDrawer.open {
   transform: translateX(0);
 }
 #menuDrawer ul {
   color: #FFECD1;
-  font-size: 20px;
+  font-size: 1.2em;
+  padding: 0 0.75em;
 }
 #menuDrawer ul li {
   margin: 20px 0;
 }
-#menuDrawer ul a {
-  color: inherit;
+#menuDrawer.drawer-phone .inviteButton {
+  background: #FF7D00;
+  border-radius: 10px;
+  color: #FFECD1;
+  font-size: 19px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 15px;
+  width: 200px;
+  margin: 0;
+  text-align: center;
+}
+#menuDrawer.drawer-phone .inviteButton a {
+  color: #001524;
 }
 
 html {
@@ -179,41 +198,64 @@ ul {
   font-size: 2.2em;
 }
 
+.page-wrapper-phone .boxHolder {
+  padding: 0;
+  width: 100%;
+}
+.page-wrapper-phone .botTitle {
+  font-size: 2em;
+  margin: 1em 0 0;
+  padding: 0;
+  text-align: center;
+}
+.page-wrapper-phone .commandBox {
+  padding: 2em;
+  width: calc(100% - 4em);
+}
+.page-wrapper-phone .commandBox .commandItem {
+  font-size: 1em;
+}
+.page-wrapper-phone .commandBox .commandItem.title {
+  font-size: 1.7em;
+  text-align: center;
+}
+.page-wrapper-phone .commandBox:not(:first-child) {
+  padding-top: 0;
+}
+
 .footer {
   background: #15616D;
+  font-size: 1em;
   min-height: 160px;
   padding: 2em;
   width: calc(100% - 4em);
-  font-size: 1em;
 }
 .footer .content {
   height: 100%;
 }
 .footer .content .footerItem {
+  float: left;
   height: 100%;
   width: calc(100% / 3);
-  float: left;
 }
 .footer .content .footerItem .title {
   margin: 0;
-  text-transform: uppercase;
   margin-bottom: 2em;
+  text-transform: uppercase;
 }
 .footer .content .footerItem .copyright,
 .footer .content .footerItem .credits {
   color: #FFECD1;
+  margin: 0;
   opacity: 0.5;
   text-transform: none;
-  margin: 0;
 }
 .footer .content .footerItem .credits {
   color: #FF7D00;
   opacity: 1;
 }
-.footer .content .footerItem a {
-  color: #FFECD1;
-}
 
+.footer-phone .content .footerItem,
 .footer-tablet .content .footerItem {
   width: calc(100% / 1);
 }
@@ -249,8 +291,8 @@ ul {
 }
 
 .commandListHolder {
-  margin: 80px 140px 0;
   display: flex;
+  margin: 80px 140px 0;
 }
 .commandListHolder > div {
   flex: 4;
@@ -265,16 +307,16 @@ ul {
   color: #FFECD1;
 }
 .commandListHolder #commandMenu ul {
-  margin: 0;
-  color: #FFECD1;
-  list-style: none;
   border: 1px solid #FFECD1;
+  color: #FFECD1;
   font-size: 30px;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 .commandListHolder #commandMenu ul li {
-  position: relative;
   padding: 10px;
+  position: relative;
 }
 .commandListHolder #commandMenu ul li p {
   margin: 5px;
@@ -286,13 +328,13 @@ ul {
   color: #FF7D00;
 }
 .commandListHolder #commandMenu ul li:nth-child(2n+1) > p::before {
-  content: "";
   background: rgba(21, 97, 109, 0.6);
-  position: absolute;
   bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
   right: 0;
   top: 0;
-  left: 0;
   z-index: -100;
 }
 .commandListHolder #commandList {
@@ -303,16 +345,17 @@ ul {
   width: 100%;
 }
 .commandListHolder #commandList tr {
-  min-height: 80px;
   display: flex;
+  min-height: 80px;
 }
-.commandListHolder #commandList tr td, .commandListHolder #commandList tr th {
-  flex: 3;
-}
-.commandListHolder #commandList tr td:first-child, .commandListHolder #commandList tr th:first-child {
+.commandListHolder #commandList tr td:first-child,
+.commandListHolder #commandList tr th:first-child {
   flex: 1;
 }
-.commandListHolder #commandList tr td:last-child, .commandListHolder #commandList tr th:last-child {
+.commandListHolder #commandList tr td,
+.commandListHolder #commandList tr th,
+.commandListHolder #commandList tr td:last-child,
+.commandListHolder #commandList tr th:last-child {
   flex: 3;
 }
 .commandListHolder #commandList tr td:first-child {

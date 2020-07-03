@@ -3,8 +3,8 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 
 const breakpoints = {
-  desktop: `(min-width: 1025px)`,
-  tablet: `(min-width: 768px) and (max-width: 1024px)`,
+  desktop: `(min-width: 1077px)`,
+  tablet: `(min-width: 768px) and (max-width: 1076px)`,
   phone: `(max-width: 767px)`,
 };
 
