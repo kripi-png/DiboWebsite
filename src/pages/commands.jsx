@@ -7,6 +7,8 @@ import messages from '../helpMessages.json'
 class CommandsPage extends React.Component {
   componentDidMount(){
     document.title = "Commands - Dibo"
+
+    loadCommandList( "Fun Commands" );
   }
 
   render() {
