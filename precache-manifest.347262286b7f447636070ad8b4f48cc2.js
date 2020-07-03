@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dba8f0eee9a5b36687d8cce0a6171119",
+    "revision": "49e2fef5de25863ac3e7d21c678a46de",
     "url": "/DiboWebsite/index.html"
   },
   {
-    "revision": "76835c76abd5cdc4dfdd",
-    "url": "/DiboWebsite/static/css/main.6ed38fc8.chunk.css"
+    "revision": "be3157f8072d4e3d304b",
+    "url": "/DiboWebsite/static/css/main.34f6ebd3.chunk.css"
   },
   {
     "revision": "f0f20fd37e5dd287ee43",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DiboWebsite/static/js/2.5dec0d30.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "76835c76abd5cdc4dfdd",
+    "revision": "be3157f8072d4e3d304b",
     "url": "/DiboWebsite/static/js/main.ccff6021.chunk.js"
   },
   {
