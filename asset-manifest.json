@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/DiboWebsite/static/css/main.0bdb5c6c.chunk.css",
-    "main.js": "/DiboWebsite/static/js/main.38dc576d.chunk.js",
-    "main.js.map": "/DiboWebsite/static/js/main.38dc576d.chunk.js.map",
+    "main.css": "/DiboWebsite/static/css/main.6ed38fc8.chunk.css",
+    "main.js": "/DiboWebsite/static/js/main.ccff6021.chunk.js",
+    "main.js.map": "/DiboWebsite/static/js/main.ccff6021.chunk.js.map",
     "runtime-main.js": "/DiboWebsite/static/js/runtime-main.70bb2bae.js",
     "runtime-main.js.map": "/DiboWebsite/static/js/runtime-main.70bb2bae.js.map",
-    "static/js/2.2ad10f5a.chunk.js": "/DiboWebsite/static/js/2.2ad10f5a.chunk.js",
-    "static/js/2.2ad10f5a.chunk.js.map": "/DiboWebsite/static/js/2.2ad10f5a.chunk.js.map",
+    "static/js/2.5dec0d30.chunk.js": "/DiboWebsite/static/js/2.5dec0d30.chunk.js",
+    "static/js/2.5dec0d30.chunk.js.map": "/DiboWebsite/static/js/2.5dec0d30.chunk.js.map",
     "index.html": "/DiboWebsite/index.html",
-    "precache-manifest.af26d52a80e3dbd6c43b92886102ce41.js": "/DiboWebsite/precache-manifest.af26d52a80e3dbd6c43b92886102ce41.js",
+    "precache-manifest.fe058f2fb86ce9238b19f875813d6721.js": "/DiboWebsite/precache-manifest.fe058f2fb86ce9238b19f875813d6721.js",
     "service-worker.js": "/DiboWebsite/service-worker.js",
-    "static/css/main.0bdb5c6c.chunk.css.map": "/DiboWebsite/static/css/main.0bdb5c6c.chunk.css.map",
-    "static/js/2.2ad10f5a.chunk.js.LICENSE.txt": "/DiboWebsite/static/js/2.2ad10f5a.chunk.js.LICENSE.txt"
+    "static/css/main.6ed38fc8.chunk.css.map": "/DiboWebsite/static/css/main.6ed38fc8.chunk.css.map",
+    "static/js/2.5dec0d30.chunk.js.LICENSE.txt": "/DiboWebsite/static/js/2.5dec0d30.chunk.js.LICENSE.txt",
+    "static/media/menuBurger.4a9a687c.svg": "/DiboWebsite/static/media/menuBurger.4a9a687c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.70bb2bae.js",
-    "static/js/2.2ad10f5a.chunk.js",
-    "static/css/main.0bdb5c6c.chunk.css",
-    "static/js/main.38dc576d.chunk.js"
+    "static/js/2.5dec0d30.chunk.js",
+    "static/css/main.6ed38fc8.chunk.css",
+    "static/js/main.ccff6021.chunk.js"
   ]
 }
