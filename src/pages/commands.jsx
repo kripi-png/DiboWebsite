@@ -31,7 +31,7 @@ export function loadCommandList( type ) {
   let list = '';
   data.forEach( cmd => {
     const regex = /`/ig;
-    let usage = cmd.usage.replace(regex, '').replace(/\</gi,'&lt;').replace(/\>/gi,'&gt;').replace(/\n/gi, '<br/>');
+    let usage = cmd.usage.replace(regex, '').replace(/</gi,'&lt;').replace(/>/gi,'&gt;').replace(/\n/gi, '<br/>');
     if ( cmd.usage.includes('\n') ) { usage = '<span>.db </span>'.concat(usage); }
 
     list += `
