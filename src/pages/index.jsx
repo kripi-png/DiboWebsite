@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar, { BurgerNavbarTablet, BurgerNavbarPhone } from '../components/navbar'
 import MenuDrawer, { MenuDrawerPhone } from '../components/menuDrawer.js'
 import Footer from '../components/footer'
-import Main from '../components/main'
+import FrontPage from '../components/frontPage'
 import Breakpoint from
   '../components/responsive_utilities/breakpoint'
 import TabletBreakpoint from
@@ -25,9 +25,9 @@ export default class MainPage extends React.Component {
           <PhoneBreakpoint><BurgerNavbarPhone/><MenuDrawerPhone/></PhoneBreakpoint>
         </div>
         {/* main */}
-        <Breakpoint><Main className="page-wrapper"></Main></Breakpoint>
-        <TabletBreakpoint><Main className="page-wrapper page-wrapper-tablet"></Main></TabletBreakpoint>
-        <PhoneBreakpoint><Main className="page-wrapper page-wrapper-phone"></Main></PhoneBreakpoint>
+        <Breakpoint><FrontPage className="page-wrapper"></FrontPage></Breakpoint>
+        <TabletBreakpoint><FrontPage className="page-wrapper page-wrapper-tablet"></FrontPage></TabletBreakpoint>
+        <PhoneBreakpoint><FrontPage className="page-wrapper page-wrapper-phone"></FrontPage></PhoneBreakpoint>
         {/* footer */}
         <Breakpoint><Footer className="footer"/></Breakpoint>
         <TabletBreakpoint><Footer className="footer footer-tablet"/></TabletBreakpoint>

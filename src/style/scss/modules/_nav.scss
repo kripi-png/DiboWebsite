@@ -38,12 +38,12 @@
   }
 
   .menuBurger {
+    fill: $highlight;
     float: left;
     height: 3em;
     margin: calc(( 80px - 3em ) / 2) 100px calc(( 80px - 3em ) / 2) 30px;
     transition: transform .08s;
     width: auto;
-    fill: $highlight;
 
     &.clicked { transform: scale(1.1); }
   }

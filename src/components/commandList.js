@@ -7,9 +7,9 @@ class CommandList extends React.Component {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Usage</th>
+              <th> Name </th>
+              <th> Description </th>
+              <th> Usage </th>
             </tr>
           </thead>
           <tbody></tbody>

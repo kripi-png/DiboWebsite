@@ -67,12 +67,12 @@ h1 {
   font-weight: bold;
 }
 .navbar .menuBurger {
+  fill: #FF7D00;
   float: left;
   height: 3em;
   margin: calc(( 80px - 3em ) / 2) 100px calc(( 80px - 3em ) / 2) 30px;
   transition: transform 0.08s;
   width: auto;
-  fill: #FF7D00;
 }
 .navbar .menuBurger.clicked {
   transform: scale(1.1);
@@ -144,18 +144,31 @@ ul {
   flex: 1;
   min-height: 673px;
 }
-.page-wrapper .botTitle {
+.page-wrapper .pageTitle {
   color: #FFECD1;
   float: right;
   font-size: 2.5em;
   padding-right: 1em;
 }
-.page-wrapper .boxHolder {
+
+.page-wrapper-tablet .pageTitle {
+  font-size: 2em;
+}
+
+.page-wrapper-phone .pageTitle {
+  float: none;
+  font-size: 2em;
+  margin: 1em 0.5em;
+  padding: 0;
+  text-align: center;
+}
+
+#MainPage .page-wrapper .boxHolder {
   height: 100%;
   padding: 5em;
   width: calc(100% - 10em);
 }
-.page-wrapper .commandBox {
+#MainPage .page-wrapper .commandBox {
   color: #FFECD1;
   float: left;
   height: 100%;
@@ -165,61 +178,50 @@ ul {
   vertical-align: top;
   width: calc(100% / 2);
 }
-.page-wrapper .commandBox .commandItem {
+#MainPage .page-wrapper .commandBox .commandItem {
   font-size: 2em;
 }
-.page-wrapper .commandBox .commandItem.title {
+#MainPage .page-wrapper .commandBox .commandItem.title {
   font-size: 2.5em;
 }
-.page-wrapper .commandBox .commandItem span::after {
+#MainPage .page-wrapper .commandBox .commandItem span::after {
   color: #FFECD1;
   content: attr(data-subtitle);
   display: inline-block;
   font-size: 0.6em;
   margin-left: 0.5em;
 }
-.page-wrapper .commandBox .commandItem:not(:first-child)::before {
+#MainPage .page-wrapper .commandBox .commandItem:not(:first-child)::before {
   content: "-";
   display: inline-block;
   font-size: 0.6em;
   margin-right: 0.5em;
 }
-
-.page-wrapper-tablet .boxHolder {
+#MainPage .page-wrapper.page-wrapper-tablet .boxHolder {
   padding: 8em 2.5em;
 }
-.page-wrapper-tablet .botTitle {
-  font-size: 2em;
-}
-.page-wrapper-tablet .commandBox .commandItem {
+#MainPage .page-wrapper.page-wrapper-tablet .commandBox .commandItem {
   font-size: 1.7em;
 }
-.page-wrapper-tablet .commandBox .commandItem.title {
+#MainPage .page-wrapper.page-wrapper-tablet .commandBox .commandItem.title {
   font-size: 2.2em;
 }
-
-.page-wrapper-phone .boxHolder {
+#MainPage .page-wrapper.page-wrapper-phone .boxHolder {
   padding: 0;
   width: 100%;
 }
-.page-wrapper-phone .botTitle {
-  font-size: 2em;
-  margin: 1em 0 0;
-  padding: 0;
-  text-align: center;
-}
-.page-wrapper-phone .commandBox {
+#MainPage .page-wrapper.page-wrapper-phone .commandBox {
   padding: 2em;
   width: calc(100% - 4em);
 }
-.page-wrapper-phone .commandBox .commandItem {
+#MainPage .page-wrapper.page-wrapper-phone .commandBox .commandItem {
   font-size: 1em;
 }
-.page-wrapper-phone .commandBox .commandItem.title {
+#MainPage .page-wrapper.page-wrapper-phone .commandBox .commandItem.title {
   font-size: 1.7em;
   text-align: center;
 }
-.page-wrapper-phone .commandBox:not(:first-child) {
+#MainPage .page-wrapper.page-wrapper-phone .commandBox:not(:first-child) {
   padding-top: 0;
 }
 
@@ -290,84 +292,121 @@ ul {
   width: 100%;
 }
 
-.commandListHolder {
+#CommandsPage .page-wrapper .commandHolder {
   display: flex;
-  margin: 80px 140px 0;
+  flex-direction: row;
+  height: 100%;
+  padding: 5em 10em;
+  width: calc(100% - ( 10em * 2 ));
 }
-.commandListHolder > div {
+#CommandsPage .page-wrapper #commandMenu,
+#CommandsPage .page-wrapper #commandList {
+  border: 1px solid #FFECD1;
+  color: #FFECD1;
+}
+#CommandsPage .page-wrapper #commandMenu {
+  flex: 1;
+  height: 100%;
+  margin-right: 2em;
+}
+#CommandsPage .page-wrapper #commandMenu > ul {
+  margin: 0;
+  padding: 1em;
+}
+#CommandsPage .page-wrapper #commandMenu > ul > li {
+  padding: 1em;
+}
+#CommandsPage .page-wrapper #commandMenu > ul > li > p {
+  margin: 0;
+}
+#CommandsPage .page-wrapper #commandMenu > ul > li.active {
+  background-color: #FF7D00;
+}
+#CommandsPage .page-wrapper #commandList {
   flex: 4;
 }
-.commandListHolder > div:not(:last-child) {
-  margin-right: 140px;
+#CommandsPage .page-wrapper #commandList table {
+  padding: 1em 2em;
 }
-.commandListHolder #commandMenu {
-  flex: 1;
-}
-.commandListHolder #commandMenu h1 {
-  color: #FFECD1;
-}
-.commandListHolder #commandMenu ul {
-  border: 1px solid #FFECD1;
-  color: #FFECD1;
-  font-size: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.commandListHolder #commandMenu ul li {
-  padding: 10px;
-  position: relative;
-}
-.commandListHolder #commandMenu ul li p {
-  margin: 5px;
-}
-.commandListHolder #commandMenu ul li:hover {
-  color: #FF7D00;
-}
-.commandListHolder #commandMenu ul li.active {
-  color: #FF7D00;
-}
-.commandListHolder #commandMenu ul li:nth-child(2n+1) > p::before {
-  background: rgba(21, 97, 109, 0.6);
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -100;
-}
-.commandListHolder #commandList {
-  border: 1px solid #FFECD1;
-}
-.commandListHolder #commandList table {
-  color: #FFECD1;
+#CommandsPage .page-wrapper #commandList table,
+#CommandsPage .page-wrapper #commandList tr {
   width: 100%;
 }
-.commandListHolder #commandList tr {
-  display: flex;
-  min-height: 80px;
-}
-.commandListHolder #commandList tr td:first-child,
-.commandListHolder #commandList tr th:first-child {
-  flex: 1;
-}
-.commandListHolder #commandList tr td,
-.commandListHolder #commandList tr th,
-.commandListHolder #commandList tr td:last-child,
-.commandListHolder #commandList tr th:last-child {
-  flex: 3;
-}
-.commandListHolder #commandList tr td:first-child {
-  padding-left: 50px;
-}
-.commandListHolder #commandList tr td:last-child {
-  padding-right: 50px;
-  text-align: right;
-}
-.commandListHolder #commandList th {
+#CommandsPage .page-wrapper #commandList th {
   color: #FF7D00;
-  line-height: 80px;
+}
+#CommandsPage .page-wrapper #commandList tr {
+  height: 50px;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet .commandHolder {
+  flex-direction: column;
+  padding: 3em;
+  width: calc(100% - ( 3em * 2 ));
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList,
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandMenu {
+  width: 100%;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandMenu {
+  margin-bottom: 2em;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList table {
+  padding: 0;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList thead {
+  display: none;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList tr {
+  margin: 1em;
+  width: 100%;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList tr:nth-child(2n+1) {
+  background: rgba(21, 97, 109, 0.6);
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList td {
+  display: block;
+  line-height: 50px;
+  margin-left: 1em;
+  min-height: 50px;
+}
+#CommandsPage .page-wrapper.page-wrapper-tablet #commandList td:first-child {
+  color: #FF7D00;
+  font-size: 1.3em;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone .commandHolder {
+  flex-direction: column;
+  padding: 3em;
+  width: calc(100% - ( 3em * 2 ));
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList,
+#CommandsPage .page-wrapper.page-wrapper-phone #commandMenu {
+  width: 100%;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandMenu {
+  margin-bottom: 2em;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList table {
+  padding: 0;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList thead {
+  display: none;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList tr {
+  margin: 1em;
+  width: 100%;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList tr:nth-child(2n+1) {
+  background: rgba(21, 97, 109, 0.6);
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList td {
+  display: block;
+  line-height: 50px;
+  margin-left: 1em;
+  min-height: 50px;
+}
+#CommandsPage .page-wrapper.page-wrapper-phone #commandList td:first-child {
+  color: #FF7D00;
+  font-size: 1.3em;
 }
 
 /*# sourceMappingURL=index.css.map */

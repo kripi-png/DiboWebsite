@@ -1,14 +1,4 @@
-.page-wrapper {
-  flex: 1;
-  min-height: 673px;
-
-  .botTitle {
-    color: $accent;
-    float: right;
-    font-size: 2.5em;
-    padding-right: 1em;
-  }
-
+#MainPage .page-wrapper {
   .boxHolder {
     height: 100%;
     padding: 5em;
@@ -46,43 +36,35 @@
       }
     }
   }
-}
 
-.page-wrapper-tablet {
-  .boxHolder {
-    padding: 8em 2.5em;
-  }
+  &.page-wrapper-tablet {
+    .boxHolder { padding: 8em 2.5em; }
 
-  .botTitle { font-size: 2em; }
+    .commandBox {
+      .commandItem { font-size: 1.7em;
 
-  .commandBox {
-    .commandItem { font-size: 1.7em;
-
-      &.title { font-size: 2.2em; }
+        &.title { font-size: 2.2em; }
+      }
     }
   }
-}
 
-.page-wrapper-phone {
-  .boxHolder {
-    padding: 0;
-    width: 100%;
-  }
-
-  .botTitle { font-size: 2em; margin: 1em 0 0; padding: 0; text-align: center; }
-
-  .commandBox {
-    padding: 2em;
-    width: calc(100% - 4em);
-
-    .commandItem {
-      font-size: 1em;
-
-      &.title { font-size: 1.7em; text-align: center; }
+  &.page-wrapper-phone {
+    .boxHolder {
+      padding: 0;
+      width: 100%;
     }
 
-    &:not(:first-child) {
-      padding-top: 0;
+    .commandBox {
+      padding: 2em;
+      width: calc(100% - 4em);
+
+      .commandItem {
+        font-size: 1em;
+
+        &.title { font-size: 1.7em; text-align: center; }
+      }
+
+      &:not(:first-child) { padding-top: 0; }
     }
   }
 }

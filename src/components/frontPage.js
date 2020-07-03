@@ -24,7 +24,7 @@ const normalCommands = {
   ]
 };
 
-export default class Main extends React.Component {
+export default class FrontPage extends React.Component {
   constructor( props ) {
     super( props );
     this.props = props;
@@ -34,13 +34,13 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <main {...this.props }>
-        <h2 className="botTitle">Multi-purpose <span>Discord Bot</span></h2>
+      <div {...this.props }>
+        <h2 className="pageTitle">Multi-purpose <span>Discord Bot</span></h2>
         <div className="boxHolder">
           <CommandBox data={this.gameCommands}/>
           <CommandBox data={this.normalCommands}/>
         </div>
-      </main>
+      </div>
     );
   }
 }
