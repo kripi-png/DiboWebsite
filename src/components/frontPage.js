@@ -7,19 +7,21 @@ const gameCommands = {
     {title: 'Rainbow 6: Siege', info: 'user stats, map / operator info'},
     {title: 'Minecraft', info: 'user info, server status'},
     {title: 'CSGO', info: 'user stats, more'},
-    {title: 'Valorant', subtitle: '?'},
-    {title: 'League of Legends', subtitle: '?'},
-    {title: 'more', subtitle: '?'}
+    {title: 'Valorant', subtitle: '?', tooltip: 'may  be implemented later'},
+    {title: 'League of Legends', subtitle: '?', tooltip: 'may  be implemented later'},
+    {title: 'more', subtitle: '?', tooltip: 'may  be implemented later'}
   ]
 };
 const normalCommands = {
   title:'Useful and Fun commands',
   elements: [
+    {title: 'poll'},
     {title: 'user / server info'},
     {title: 'avatar'},
     {title: 'animal pics and facts', subtitle: 'aww'},
     {title: 'random num.gen.'},
     {title: 'coin flip'},
+    {title: 'MyAnimelist commands'},
     {title: 'more'}
   ]
 };

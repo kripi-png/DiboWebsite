@@ -1,0 +1,26 @@
+// scss-lint:disable ImportantRule
+.tooltip {
+  .tooltip-text {
+    // background-color: $accent;
+    border-radius: 10px;
+    color: $accent;
+    display: inline-block;
+    font-size: .5em;
+    height: 20px;
+    line-height: 30px; // height + margin
+    margin: 0 0 0 5px;
+    padding: 5px;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .tooltip-text {
+      visibility: visible;
+    }
+
+    >span::after {
+      display: none !important;
+    }
+  }
+}
