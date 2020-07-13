@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DiboWebsite/precache-manifest.347262286b7f447636070ad8b4f48cc2.js"
+  "/DiboWebsite/precache-manifest.fc83193a81af5bf1eba58bd03bf0f64b.js"
 );
 
 self.addEventListener('message', (event) => {

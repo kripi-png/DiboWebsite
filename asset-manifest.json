@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/DiboWebsite/static/css/main.34f6ebd3.chunk.css",
-    "main.js": "/DiboWebsite/static/js/main.ccff6021.chunk.js",
-    "main.js.map": "/DiboWebsite/static/js/main.ccff6021.chunk.js.map",
+    "main.css": "/DiboWebsite/static/css/main.69bf0fb9.chunk.css",
+    "main.js": "/DiboWebsite/static/js/main.5c0e4375.chunk.js",
+    "main.js.map": "/DiboWebsite/static/js/main.5c0e4375.chunk.js.map",
     "runtime-main.js": "/DiboWebsite/static/js/runtime-main.70bb2bae.js",
     "runtime-main.js.map": "/DiboWebsite/static/js/runtime-main.70bb2bae.js.map",
     "static/js/2.5dec0d30.chunk.js": "/DiboWebsite/static/js/2.5dec0d30.chunk.js",
     "static/js/2.5dec0d30.chunk.js.map": "/DiboWebsite/static/js/2.5dec0d30.chunk.js.map",
     "index.html": "/DiboWebsite/index.html",
-    "precache-manifest.347262286b7f447636070ad8b4f48cc2.js": "/DiboWebsite/precache-manifest.347262286b7f447636070ad8b4f48cc2.js",
+    "precache-manifest.fc83193a81af5bf1eba58bd03bf0f64b.js": "/DiboWebsite/precache-manifest.fc83193a81af5bf1eba58bd03bf0f64b.js",
     "service-worker.js": "/DiboWebsite/service-worker.js",
-    "static/css/main.34f6ebd3.chunk.css.map": "/DiboWebsite/static/css/main.34f6ebd3.chunk.css.map",
+    "static/css/main.69bf0fb9.chunk.css.map": "/DiboWebsite/static/css/main.69bf0fb9.chunk.css.map",
     "static/js/2.5dec0d30.chunk.js.LICENSE.txt": "/DiboWebsite/static/js/2.5dec0d30.chunk.js.LICENSE.txt",
     "static/media/menuBurger.4a9a687c.svg": "/DiboWebsite/static/media/menuBurger.4a9a687c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.70bb2bae.js",
     "static/js/2.5dec0d30.chunk.js",
-    "static/css/main.34f6ebd3.chunk.css",
-    "static/js/main.ccff6021.chunk.js"
+    "static/css/main.69bf0fb9.chunk.css",
+    "static/js/main.5c0e4375.chunk.js"
   ]
 }
